@@ -1,7 +1,8 @@
-package com.javaex.ex02;
+package com.javaex.ex02a;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -10,21 +11,14 @@ public class FriendApp {
 
     public static void main(String[] args) {
     	Scanner scanner = new Scanner(System.in);
-        ArrayList<Friend> friendList = new ArrayList<>();
+        List<Friend> friendList = new ArrayList<>();
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("친구 정보를 입력하세요.");
-
-            System.out.print("이름: ");
-            String name = scanner.nextLine();
-            
-            System.out.print("핸드폰: ");
-            String hp = scanner.nextLine();
-
-            System.out.print("학교: ");
-            String school = scanner.nextLine();
+            System.out.println("친구를 3명 등록해주세요.");
+            String line = scanner.nextLine();
+            String[] data = line.split(" ");
            
-            Friend friend = new Friend(name, hp, school);
+            Friend friend = new Friend(data [0], data [1], data [2]);
             friendList.add(friend);
         }
         System.out.println("입력된 친구 정보:");
@@ -35,7 +29,7 @@ public class FriendApp {
 
 		while (it.hasNext()) { 
 			Friend item = it.next(); 
-			System.out.println(item);
+			item.showInfo();
 		}
         
         
