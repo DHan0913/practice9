@@ -26,6 +26,7 @@ public class GoodsApp {
 			Goods goods = new Goods(data[0], data[1], Integer.parseInt(data[2]));
 			goodsList.add(goods);
 		}
+		scanner.close();
 		System.out.println("==========");
 		Iterator<Goods> it = goodsList.iterator(); // 반복자 추출
 

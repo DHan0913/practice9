@@ -30,6 +30,7 @@ public class GoodsApp {
 			Goods goods = new Goods(name, price, count);
 			goodsList.add(goods);
 		}
+		scanner.close();
 		
 		Iterator<Goods> it = goodsList.iterator(); // 반복자 추출
 
@@ -44,7 +45,7 @@ public class GoodsApp {
 			Goods item = s.next();
 			countOfGoods += item.getCount();
 		}
-		scanner.close();
+		
 		// 모든 사각형의 합 출력
 		System.out.println("모든 상품의 갯수는 " + countOfGoods + " 입니다.");
 

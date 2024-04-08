@@ -30,6 +30,7 @@ public class GoodsApp {
 			Goods goodss = new Goods(name, price, count);
 			goodsList.add(goodss);
 		}
+		scanner.close();
 		System.out.println("==========");
 		for (Goods goodss : goodsList) {
 			System.out.println(goodss);
@@ -39,8 +40,7 @@ public class GoodsApp {
 			sum += goodss.getCount();
 
 		}
-		scanner.close();
-	
+
 		// 모든 사각형의 합 출력
 		System.out.println("모든 상품의 갯수는 " + sum + " 입니다.");
 
