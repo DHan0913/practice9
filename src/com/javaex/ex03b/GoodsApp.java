@@ -15,7 +15,6 @@ public class GoodsApp {
 		System.out.println("상품을 입력해주세요(종료 q)");
 		
 		while (true) {
-			System.out.println("상품을 입력해주세요(종료 q)");
 			String line = scanner.nextLine();
 			if (line.equals("q")) {
 				System.out.println("[입력완료]");
