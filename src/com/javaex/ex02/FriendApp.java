@@ -38,7 +38,7 @@ public class FriendApp {
 			System.out.println(item);
 		}
         
-        
+		scanner.close();
         
         
     }

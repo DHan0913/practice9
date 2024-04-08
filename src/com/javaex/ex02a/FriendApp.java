@@ -31,7 +31,7 @@ public class FriendApp {
 			Friend item = it.next(); 
 			item.showInfo();
 		}
-        
+		scanner.close();
         
         
         

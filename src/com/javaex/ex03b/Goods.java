@@ -1,4 +1,4 @@
-package com.javaex.ex03a;
+package com.javaex.ex03b;
 
 public class Goods {
 

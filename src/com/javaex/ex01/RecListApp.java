@@ -48,6 +48,7 @@ public class RecListApp {
 			Rectangle rect = it.next();
 			sum += rect.area();
 		}
+		
 //		for (Rectangle rectangle : rList) {
 //			sum += rectangle.area();
 //		}
@@ -70,4 +71,5 @@ public class RecListApp {
 			item.draw();
 		}
 	}
+	
 }

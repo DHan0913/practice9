@@ -39,6 +39,7 @@ public class GoodsApp {
 			sum += goodss.getCount();
 
 		}
+		scanner.close();
 	
 		// 모든 사각형의 합 출력
 		System.out.println("모든 상품의 갯수는 " + sum + " 입니다.");

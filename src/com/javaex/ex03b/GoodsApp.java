@@ -1,4 +1,4 @@
-package com.javaex.ex03a;
+package com.javaex.ex03b;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,24 +9,28 @@ public class GoodsApp {
 
 	public static void main(String[] args) {
 
-		int sum = 0;
-		String a = "";
-		Scanner scanner = new Scanner(System.in);
 		List<Goods> goodsList = new ArrayList<>();
-		while (!a.equals("q")) {
+		Scanner scanner = new Scanner(System.in);
+		int countOfGoods = 0;
+		System.out.println("상품을 입력해주세요(종료 q)");
+		
+		while (true) {
 			System.out.println("상품을 입력해주세요(종료 q)");
-			String goodsLine = scanner.nextLine();
-			a = goodsLine;
-			if (a.equals("q")) {
+			String line = scanner.nextLine();
+			if (line.equals("q")) {
 				System.out.println("[입력완료]");
+				System.out.println("==========");
 				break;
 			}
-			String[] data = goodsLine.split(",");
+			String[] data = line.split(",");
+			String name = data[0].trim();
+			String price = data[1].trim();
+			int count = Integer.parseInt(data[2].trim());
 
-			Goods goods = new Goods(data[0], data[1], Integer.parseInt(data[2]));
+			Goods goods = new Goods(name, price, count);
 			goodsList.add(goods);
 		}
-		System.out.println("==========");
+		
 		Iterator<Goods> it = goodsList.iterator(); // 반복자 추출
 
 		while (it.hasNext()) {
@@ -38,10 +42,13 @@ public class GoodsApp {
 
 		while (s.hasNext()) {
 			Goods item = s.next();
-			sum += item.getCount();
+			countOfGoods += item.getCount();
 		}
+		scanner.close();
 		// 모든 사각형의 합 출력
-		System.out.println("모든 상품의 갯수는 " + sum + " 입니다.");
+		System.out.println("모든 상품의 갯수는 " + countOfGoods + " 입니다.");
 
 	}
+	
+	
 }
